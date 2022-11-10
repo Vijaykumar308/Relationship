@@ -20,7 +20,7 @@ checkBtn.addEventListener("click", () => {
     ans = arrToNum(ans);
     heartContent.innerHTML = ans+"%";
     contentMyName.innerHTML = myName.value;
-    contentHerName.innerHTML = generateString(herName.value.length);
+    contentHerName.innerHTML = generateString(herName.value.length).toLowerCase();
     show();
 });
 
