@@ -10,7 +10,6 @@ let contentHerName = document.querySelector("#contentHerName");
 const heartContent  = document.querySelector(".love-percentage");
 //click on check btn
 checkBtn.addEventListener("click", () => {
-
     let bothName = myName.value + herName.value;
     bothName = bothName.toLowerCase();
     let countElementOccured = countCharacter(bothName);
@@ -21,6 +20,7 @@ checkBtn.addEventListener("click", () => {
     heartContent.innerHTML = ans+"%";
     contentMyName.innerHTML = myName.value;
     contentHerName.innerHTML = generateString(herName.value.length).toLowerCase();
+
     show();
 });
 
