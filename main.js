@@ -13,7 +13,6 @@ checkBtn.addEventListener("click", () => {
 
     let bothName = myName.value + herName.value;
     bothName = bothName.toLowerCase();
-    console.log(bothName);
     let countElementOccured = countCharacter(bothName);
     let numbers = allNumbers(countElementOccured);
 
