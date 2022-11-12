@@ -8,6 +8,7 @@ let contentMyName = document.querySelector("#contentMyName");
 let contentHerName = document.querySelector("#contentHerName");
 
 const heartContent  = document.querySelector(".love-percentage");
+const isEncpt = document.querySelector("#isEncrypted");
 //click on check btn
 checkBtn.addEventListener("click", () => {
     let bothName = myName.value + herName.value;
@@ -19,8 +20,13 @@ checkBtn.addEventListener("click", () => {
     ans = arrToNum(ans);
     heartContent.innerHTML = ans+"%";
     contentMyName.innerHTML = myName.value;
-    contentHerName.innerHTML = generateString(herName.value.length).toLowerCase();
-
+    if(isEncpted()){
+        contentHerName.innerHTML = generateString(herName.value.length).toLowerCase();
+    }else{
+        contentHerName.innerHTML = herName.value;
+    }
+    myName.value = "";
+    herName.value = "";
     show();
 });
 
@@ -90,3 +96,10 @@ function generateString(length) {
     }
     return result;
 }
+
+isEncpt.addEventListener("click",()=>{
+    (isEncpt.value == "on") ? isEncpt.setAttribute("value","checked") : 
+    isEncpt.removeAttribute("value");;
+});
+
+const isEncpted = () => (isEncpt.value === "on") ? true : false;
