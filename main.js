@@ -20,12 +20,13 @@ checkBtn.addEventListener("click", () => {
     ans = arrToNum(ans);
     heartContent.innerHTML = ans+"%";
     contentMyName.innerHTML = myName.value;
+
     if(isEncpted()){
         contentHerName.innerHTML = generateString(herName.value.length).toLowerCase();
     }else{
         contentHerName.innerHTML = herName.value;
     }
-    myName.value = "";
+    
     herName.value = "";
     show();
 });
@@ -53,6 +54,7 @@ function countCharacter(arr) {
         }
 
     }
+    console.log(obj);
     return obj;
 }
 
